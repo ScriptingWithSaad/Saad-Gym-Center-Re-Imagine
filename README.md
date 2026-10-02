@@ -45,3 +45,5 @@ python scripts/optimize_images.py
 `tests/browser.js` is a Playwright page function, executable through the browser tool with the local server running. It checks 13 viewport sizes from 320px to 1920px, heading layout, overflow, mobile navigation, all filters, program details, plan-to-enquiry context, editable clipboard success/failure paths, focus restoration, FAQs, rotation, touch input, reduced motion and a no-JavaScript fallback. Clipboard calls are stubbed during tests so the user's computer clipboard is preserved.
 
 The previous gym website is [available here](https://scriptingwithsaad.github.io/Saad-Gym-Fitness-Landing-Page/).
+
+Mobile program and enquiry dialogs fill the visible viewport up to 900px wide. Their close controls stay visible while the content scrolls, the background position is restored after closing, and reopened cards start at the top. `tests/mobile-dialogs.browser.js` covers eight portrait/landscape sizes and simulates viewport resizing while an enquiry is open.
